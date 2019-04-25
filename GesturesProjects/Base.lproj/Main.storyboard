@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="80R-dy-D6H">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second View Controller-->
+        <scene sceneID="eMl-93-VFn">
+            <objects>
+                <viewController id="80R-dy-D6H" customClass="SecondViewController" customModule="GesturesProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qfb-AK-k56">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SoccerImage" translatesAutoresizingMaskIntoConstraints="NO" id="wkE-74-O8C">
+                                <rect key="frame" x="87.5" y="50" width="200" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Jy6-X6-R1o"/>
+                                    <constraint firstAttribute="width" constant="200" id="Yf7-cv-TIC"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hd0-m7-Ze1" appends="YES" id="oWw-Bp-7n0"/>
+                                    <outletCollection property="gestureRecognizers" destination="HJU-55-p4m" appends="YES" id="9tr-Gg-fKQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="oH0-Fz-qaT" appends="YES" id="WGI-zk-jwu"/>
+                                    <outletCollection property="gestureRecognizers" destination="UxI-ZU-jxa" appends="YES" id="7W4-Wg-zTX"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1130900923" green="1" blue="0.1242155722" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wkE-74-O8C" firstAttribute="centerX" secondItem="1YL-gT-nMW" secondAttribute="centerX" id="2NL-tY-1Rp"/>
+                            <constraint firstItem="wkE-74-O8C" firstAttribute="top" secondItem="1YL-gT-nMW" secondAttribute="top" constant="30" id="jlS-2R-MUY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1YL-gT-nMW"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="wkE-74-O8C" id="rsg-2O-cSj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lnb-2l-eQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="hd0-m7-Ze1">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="80R-dy-D6H" id="1zg-H7-buY"/>
+                        <outlet property="delegate" destination="80R-dy-D6H" id="qC3-NW-zru"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="HJU-55-p4m">
+                    <connections>
+                        <action selector="handlePinch:" destination="80R-dy-D6H" id="hFN-cs-zpU"/>
+                        <outlet property="delegate" destination="80R-dy-D6H" id="4jl-le-guA"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="oH0-Fz-qaT">
+                    <connections>
+                        <action selector="longPress:" destination="80R-dy-D6H" id="ByT-BC-NKe"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="UxI-ZU-jxa">
+                    <connections>
+                        <action selector="rotateBallScreenEdge:" destination="80R-dy-D6H" id="T7k-PK-pVc"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-575" y="138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GesturesProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3B-Tk-FET">
+                                <rect key="frame" x="87" y="323" width="201" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4b-wP-PxZ">
+                                <rect key="frame" x="87" y="254" width="201" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ho-OM-zRb">
+                                <rect key="frame" x="206" y="626" width="153" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rotate Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWK-ly-inE">
+                                <rect key="frame" x="62" y="402" width="251" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="changeLabel" destination="b3B-Tk-FET" id="Ww4-c6-LbK"/>
+                        <outlet property="rotateLabel" destination="eWK-ly-inE" id="F66-Wc-N0c"/>
+                        <outlet property="swipeLabel" destination="4ho-OM-zRb" id="ln5-6L-e7E"/>
+                        <outlet property="tutorialLabel" destination="C4b-wP-PxZ" id="QqA-Hb-qVA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SoccerImage" width="80" height="80"/>
+    </resources>
+</document>
